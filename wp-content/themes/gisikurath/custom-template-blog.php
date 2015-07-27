@@ -21,7 +21,7 @@ get_header(); ?>
 					'posts_per_page' => 6,
 					'category__in' => array(1, 3, 4, 17),
 					'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
-					'category__not_in' => array( 22, 23 ), 
+					'category__not_in' => array( 23 ), 
     				);
 				$blogposts = new WP_Query($args);
 				// The Loop...
