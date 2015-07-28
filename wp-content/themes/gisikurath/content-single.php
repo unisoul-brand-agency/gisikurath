@@ -5,7 +5,6 @@
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	
-
 		<div class="single-entry-header">
 			<div class="entry-meta single-rezept-entry-meta">
 				<?php $comment_count = get_comments_number( $post_id ); ?>
@@ -23,12 +22,8 @@
 					'rezepte', 'post'));
 				// according the post type it is show the differnt content that is specified 
 				if ( 'rezepte' == get_post_type() ) {
-
 					get_template_part('recipes-post');
-  					get_template_part('rezepte-zutaten');
-
 				} elseif ( 'post' == get_post_type() ) {
-
 					get_template_part('');
 				} 
 			?>
@@ -38,8 +33,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-		</div><!-- .single-entry-content -->
-
+		
 		<footer class="entry-footer rezepte-entry-footer clear">
 			<?php echo getPostLikeLink(get_the_ID());?>
 			<div class="social-foter-single">
@@ -57,3 +51,4 @@
 			<?php gisikurath_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 	</article><!-- #post-## -->
+	</div><!-- .single-entry-content -->

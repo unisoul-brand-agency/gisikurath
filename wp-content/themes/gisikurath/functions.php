@@ -171,6 +171,12 @@ function gisikurath_scripts() {
 
 	wp_enqueue_script( 'ScrollToFixed', get_template_directory_uri() . '/js/ScrollToFixed.js', array(), '1.0.0', true );
 
+	wp_enqueue_script( 'ajaxcomments', get_template_directory_uri() . '/js/ajaxcomments.js', array(), '1.0.0', true );
+
+	wp_enqueue_script( 'sizzle', get_template_directory_uri() . '/js/sizzle.js', array(), '1.0.0', true );
+
+	wp_enqueue_script( 'elementQuery', get_template_directory_uri() . '/js/elementQuery.min.js', array(), '1.0.0', true );
+
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -276,4 +282,9 @@ function t5_move_textarea( $input = array () )
     // Now called on comment_form_top, $textarea is filled.
     print apply_filters( 'comment_form_field_comment', $textarea );
 }
+
+/**
+ * Load ajax script comments.
+ */
+require get_template_directory() . '/inc/ajaxcomments.php';
 ?>

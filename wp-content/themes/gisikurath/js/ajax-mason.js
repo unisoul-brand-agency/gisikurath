@@ -70,7 +70,7 @@ var Tutorial;
         itemSelector : 'div.post_brick',     // selector for all items you'll retrieve 
         loading: {
           finishedMsg: '<span class="bearwithus">Sorry...</span><span class="loading">No more articles</span>',
-          msg: $('<div id="recipes-footer-box zigzag"><img alt="Loading..." src="../wp-content/themes/gisikurath/images/loader.gif" /><div><span class="bearwithus">Bear with us...</span><span class="loading">Loading new content</span></div></div>')
+          msg: $('<div id="recipes-footer-box zigzag"><img alt="Loading..." src="" /><div><span class="bearwithus">Bear with us...</span><span class="loading">Loading new content</span></div></div>')
         },
 
         errorCallback: function(){Tutorial.isScrolling = false;}
@@ -123,7 +123,7 @@ var Tutorial;
           currPage: 1
         },
         loading: {
-          msg: $('<div id="infscr-loading"><img alt="Loading..." src="/gisikurath/wp-content/themes/gisikurath/images/loader.gif" /><div><span class="bearwithus">Bear with us...</span><span class="loading">Loading new content</span></div></div>')
+          msg: $('<div id="infscr-loading"><img alt="Loading..." src="" /><div><span class="bearwithus">Bear with us...</span><span class="loading">Loading new content</span></div></div>')
         }
       });    
       Tutorial.masonry.infinitescroll('bind');

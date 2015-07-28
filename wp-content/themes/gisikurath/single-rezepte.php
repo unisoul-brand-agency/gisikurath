@@ -9,7 +9,6 @@ get_header(); ?>
     <main id="main" class="site-main content" role="main">
     <!--FIXED HEADER TOP-->
     <?php get_template_part('site-wide-header'); ?>
-    <progress value="0"></progress>
     <!--FIXED HEADER TOP-->
     <?php while ( have_posts() ) : the_post(); ?>
       <?php if ( has_post_thumbnail() ) { ?>
@@ -20,18 +19,17 @@ get_header(); ?>
         ?>
         <section  class="single_post_container">
           <?php get_template_part( 'content', 'single' ); ?>
+        </section><!-- .single_post_container -->
 
-        </section><!-- #primary -->
-
-        <section class="single_post_navigation_bottom">
+        <!--<section class="single_post_navigation_bottom">-->
           <!--<?php the_post_navigation()?>-->
-        </section><!-- #primary -->
-
-        <div id="comment-wrapper">
+        <!--</section>#primary -->
+        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div id="comment-wrapper">
             <section class="single_post_comment_box">
-            <span class="comment-single-title">
+            <h4 class="comment-single-title">
               KOMMENTARE
-            </span><!-- .comment-single-title -->
+            </h4><!-- .comment-single-title -->
             <span class="comment-single-subtitle">Viele Köche müssen nicht immer den Brei verderben …</span>
             <section class="single_post_comments">
             <?php
@@ -43,6 +41,7 @@ get_header(); ?>
           </section><!-- .single_post_comments -->
           </section><!-- .single_post_comment_box -->
         </div><!-- #comment-wrapper -->
+        </div><!-- #comment-color-wrapper -->
         <?php endwhile; // end of the loop. ?>
     </main><!-- #main -->
   <div class="clear"></div>

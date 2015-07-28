@@ -952,7 +952,6 @@ ul.inner li a:hover {
 	width: 50%;
 	}
 
-
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -998,28 +997,49 @@ ul.inner li a:hover {
 	padding-bottom: 20px;
 	margin-left: 2%;
 	margin-right: 2%;
-	border-bottom: solid 2px #000;
 	}
+
 #zutaten-wrapper, 
 #comment-wrapper {
   margin: 0 -9999rem;
   padding: 4rem 9999rem;
-
-  background: rgba(145,151,77,0.24);
   height: auto;
-  background: #ffc8c8;	
   }
 
+.single-rezepte article.tag-blue .single-entry-content #zutaten-wrapper,
+.single-rezepte div.tag-blue #comment-wrapper {
+	background-color: rgba(148, 183, 187, 1);
+	}
+
+
+.single-rezepte article.tag-red .single-entry-content #zutaten-wrapper,
+.single-rezepte div.tag-red #comment-wrapper {
+	background-color: rgba(203, 51, 59, 1);
+}
+
+.single-rezepte article.tag-green .single-entry-content #zutaten-wrapper,
+.single-rezepte div.tag-green #comment-wrapper {
+	background-color: rgba(148, 183, 187, 1);
+}
+
+.single-rezepte article.tag-purple .single-entry-content #zutaten-wrapper,
+.single-rezepte div.tag-purple #comment-wrapper {
+	background-color: rgba(176, 124, 131, 1);
+}
+
  #comment-wrapper  {
- 	padding-bottom: 0;
+ 	padding-bottom: 50px;
  }
-.zutaten-heading {
+
+.zutaten-heading, 
+.zutaten_list_heading{
 	font-family: BookmanITCbyBT-Demi;
 	color: #000;
 	text-align: center;
 }
+
 .mail-zutaten {
-	width: 30%;
+	width: 60%;
 	height: auto;
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -1032,24 +1052,54 @@ ul.inner li a:hover {
 	display: block;
 	}
 
-ul.zutaten-list {
-	margin: 0;
-  	padding: 60px;
-	max-height: 300px;
-}
+.single_zutaten_lists_obj {
+	text-align: center;
+	}
 
-li.menu-item-single {
-  list-style: none!important;
-  float: left;
-  width: 32%;
-  margin-bottom: 5px;
-}
+ ul.zutaten_lists {
+ 	margin: 0;
+  	padding: 40px 0;
+ 	}
 
-li.menu-item-single a {
-	text-decoration: none;
+ul.zutaten_lists li.zutaten_list_item {
+    list-style: none!important;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    text-decoration: none;
+    font-family: futura;
+    font-size: 1.2em;
+	}
+
+.single_zutaten_lists_obj[min-height~="300px"] ul > li {
+	float:left;
+	width: 50%;
+	}
+
+.single_zutaten_lists_obj[min-height~="300px"] ul > li:nth-child(even) {
+	border-left: 2px solid #000;
+	}
+
+.zub_content_box {
+	font-family: BookmanITCbyBT-Demi;
+	text-align: center;
+	}
+
+.general_content_box {
 	font-family: futura;
-	font-size: 1.2em;
 }
+
+.zub_heading {
+	font-family: futura-bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* new CSS3 syntax */
+ul.zutaten_lists::after {
+   border-right: 2px solid #000; 
+}
+
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1355,8 +1405,7 @@ p.home-intro-body {
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 0;
-
-}
+	}
 
 #home_wrapper {
 
@@ -1923,6 +1972,7 @@ form#sbc-search select#cat {
 .single_post_container {
 	padding-left: 1%;
 	padding-right: 1%;
+	max-width: 950px;
 	width: 70%;
   	margin: 0 auto;  
 	}
@@ -1940,8 +1990,13 @@ form#sbc-search select#cat {
 	text-transform: uppercase;
 	}
 
+.comments-title {
+	margin-left: 40px;
+}
+
 .all-comments {
 	font-size: 1em;
+	font-family: futura-bold;
 	cursor: pointer;
 	}
 
@@ -2010,12 +2065,13 @@ form#sbc-search select#cat {
 	margin: 0 auto;
 	width: 80%;
 	}
+
 footer.rezepte-entry-footer {
-	padding: 40px;
+	padding: 40px 0;
 	}
 
 p.post-like {
-	width: 50%;
+	width: 20%;
 	float: left;
 	}
 
@@ -2031,12 +2087,12 @@ p.post-like {
 	height: 50px;
 	text-align: center;
 	background-color: #000; 
-	float: left;
+	float: right;
 	margin:10px;
 	/* width and height can be anything, as long as they're equal */
 	}
 
-.circle i{
+.circle i {
 	color: #fff;
   	font-size: 1.9em;
   	padding: 10px;
@@ -2046,28 +2102,21 @@ p.post-like {
 	font-family: futura-light;
 	float: left;
   	display: inline;
-  	margin: 28px;
+  	margin: 25px 0;
 	}
 
 .socail-footer-icon {
 	cursor: pointer;
 	margin: 10px;
-}
+	}
 
 .social-foter-single {
 	float: left;
-	width: 50%;
+	width: 80%;
 	}
 
 .post-edit-link {
 	font-family: BookmanITCbyBT-Demi;
-	margin-top: 10px;
-	display: block;
-	width: 10%;
-	height: auto;
-	color: #fff;
-	background-color: #cb333b;
-	text-align: center;
 	}
 
 .cat-links {
@@ -2240,17 +2289,28 @@ p.post-like {
  float: right;
 }
 .comment-list {
-
+	margin: 0;
+	padding: 0;
 	}
 
 .comment-list {
-
 	list-style: none;
 	}
 
+.comment-metadata,
+.comment-author {
+	display: inline-block;
+}
+
+.comment-author .fn {
+	font-family: BookmanITCbyBT-Demi;
+}
+.comment-metadata a,
+.says,
+.comment-content,
 .comment-list a{
 	text-decoration: none;
-	color: red;
+	font-family: futura;
 	}
 
 .comment-body  {
@@ -2258,11 +2318,11 @@ p.post-like {
 	}
 
 li .comments .thread-even .comment-body  {
-	float: left;
+
 	}
 
 li .comments .thread-odd .comment-body  {
-	float: right;
+
 	}
 
 .coment-respond {
@@ -2275,6 +2335,10 @@ li .comments .thread-odd .comment-body  {
  
 	}
 
+.comments-area {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
 
 .comment-respond .comment-reply-title {
 	font-family: BookmanITCbyBT-Demi;
@@ -2386,12 +2450,12 @@ p.comment-notes {
 
 }
 li .even {
-	float: left;
+	
 
 }
 
 li .odd {
-	float: right;
+	
 }
 
 .comment-body
@@ -2835,7 +2899,7 @@ b:focus {
 }
 
 article footer  p.post-like { 
-	margin:0; 
+	margin:26px 0; 
 	}
 
 article footer .like { 

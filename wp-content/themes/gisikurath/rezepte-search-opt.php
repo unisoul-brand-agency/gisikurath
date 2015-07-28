@@ -7,7 +7,7 @@
     <b class="close-modal fa fa-times"></b>
 
 <a class="btn btn-navbar toggle opt-fil-1" data-toggle="collapse" data-target=".nav-collapse"></a>
-<a class="brand menu-item-type-filter-all " href="/gisikurath/recipes/">Alles auf einmal</a> 
+<a class="brand menu-item-type-filter-all " href="/wp/recipes/">Alles auf einmal</a> 
         <?php
           $vsearch_nav = wp_nav_menu (
             array (
@@ -25,7 +25,7 @@
    <div class = "toggle modal">
    <b class="close-modal fa fa-times"></b> 
         <a class="btn btn-navbar toggle opt-fil-2" data-toggle="collapse" data-target=".nav-collapse"> </a>
-        <a class="brand menu-item-type-filter-all " href="/gisikurath/recipes/">Alles auf einmal</a>
+        <a class="brand menu-item-type-filter-all " href="/wp/recipes/">Alles auf einmal</a>
         <?php
           $vsearch_nav = wp_nav_menu (
             array (
@@ -43,7 +43,7 @@
    <div class = "toggle modal">
    <b class="close-modal fa fa-times"></b> 
       <a class="btn btn-navbar toggle opt-fil-3" data-toggle="collapse" data-target=".nav-collapse"></a>
-      <a class="brand menu-item-type-filter-all " href="/gisikurath/recipes/">Alles auf einmal</a>
+      <a class="brand menu-item-type-filter-all " href="/wp/recipes/">Alles auf einmal</a>
         <?php
           $vsearch_nav = wp_nav_menu (
             array (

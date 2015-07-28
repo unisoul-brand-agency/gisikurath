@@ -1374,9 +1374,9 @@ function get_comment_reply_link( $args = array(), $comment = null, $post = null 
 	$defaults = array(
 		'add_below'     => 'comment',
 		'respond_id'    => 'respond',
-		'reply_text'    => __( 'Reply' ),
-		'reply_to_text' => __( 'Reply to %s' ),
-		'login_text'    => __( 'Log in to Reply' ),
+		'reply_text'    => __( 'Antwort' ),
+		'reply_to_text' => __( 'Antwort to %s' ),
+		'login_text'    => __( 'Log in to Antwort' ),
 		'depth'         => 0,
 		'before'        => '',
 		'after'         => ''
@@ -1902,7 +1902,7 @@ class Walker_Comment extends Walker {
 		<?php endif; ?>
 		<div class="comment-author vcard">
 			<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-			<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
+			<?php printf( __( '<cite class="fn">%s</cite> <span class="says">sagt:</span>' ), get_comment_author_link() ); ?>
 		</div>
 		<?php if ( '0' == $comment->comment_approved ) : ?>
 		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ) ?></em>
@@ -1954,7 +1954,7 @@ class Walker_Comment extends Walker {
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
 						<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-						<?php printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
+						<?php printf( __( '%s <span class="says">sagt:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
 					</div><!-- .comment-author -->
 
 					<div class="comment-metadata">
